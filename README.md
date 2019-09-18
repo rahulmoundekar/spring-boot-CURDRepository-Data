@@ -4,6 +4,12 @@
   CrudRepository provides generic CRUD operation on a repository for a specific type. CrudRepository is a Spring data interface and to use it we need to create our interface by extending CrudRepository. Spring provides CrudRepository implementation class automatically at runtime. It contains methods such as save, findById, delete, count etc. Spring boot automatically detects our repository if the package of that repository interface is the same or sub-package of the class annotated with @SpringBootApplication.
   Spring boot can automatically detect our repository if the package of that interface is the same or sub-package of the class annotated with @SpringBootApplication and if not then we need to use @EnableJpaRepositories annotation with @SpringBootApplication.
   
+### Maven POM.XML
+    <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+	  </dependency>
+  
 ### Application Properties
   #### spring.data.jpa.repositories.enabled: 
     It enables JPA repositories. The default value is true. 
