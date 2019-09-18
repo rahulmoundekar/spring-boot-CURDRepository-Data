@@ -43,3 +43,15 @@
   
   #### spring.jpa.show-sql: 
     It enables logging of SQL statements. Default value is false.
+    
+### CrudRepository Interface
+ CrudRepository is an interface and extends Spring data Repository interface. CrudRepository provides generic CRUD operation on a repository for a specific type. It has generic methods for CRUD operation. To use CrudRepository we have to create our interface and extend CrudRepository. We need not to implement our interface, its implementation will be created automatically at runtime. Find some of CrudRepository methods. 
+ 
+#### <S extends T> S save(S entity): Saves and updates the current entity and returns that entity. 
+#### Optional<T> findById(ID primaryKey): Returns the entity for the given id. 
+#### Iterable<T> findAll(): Returns all entities. 
+#### long count(): Returns the count. 
+#### void delete(T entity): Deletes the given entity. 
+#### boolean existsById(ID primaryKey): Checks if the entity for the given id exists or not. 
+
+CrudRepository has subinterface as PagingAndSortingRepository that provide additional methods to retrieve entities using the pagination and sorting abstraction.  
